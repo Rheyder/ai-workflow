@@ -30,7 +30,7 @@ This directory holds **persistent rules**, **skills** (reusable procedures), and
 |------|---------|
 | [karpathy-guidelines.mdc](rules/karpathy-guidelines.mdc) | Think before coding, simplicity, surgical changes, verifiable success criteria. |
 | [verification-before-completion.mdc](rules/verification-before-completion.mdc) | Do not claim completion without **fresh evidence** (command run, output read, exit code). |
-| [language.mdc](rules/language.mdc) | **Chat with the user** in Brazilian Portuguese (**pt-BR**); repository content and **Git commit messages** in English (`en_US`). |
+| [language.mdc](rules/language.mdc) | **English** (`en_US`) for the whole repo, commits, and assistant chat; **`rheyder-method-v1.0-pt_BR.md`** stays in **Brazilian Portuguese**. |
 | [base-creation.mdc](rules/base-creation.mdc) | Self-contained: skills/rules/agents must work from the clone alone (no reliance on external links). |
 | [commit-push-hitl.mdc](rules/commit-push-hitl.mdc) | **Commit and push** are always **human-in-the-loop**; the assistant announces a slice ready and runs Git only if the user asks. |
 | [modo-solo.mdc](rules/modo-solo.mdc) | Solo mode: orchestrator + developer + reviewer as **roles/prompts**, not separate people; branches `<track>/<artifact-slug>`. |

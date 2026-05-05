@@ -19,7 +19,7 @@ Also read **`.cursor/reference/skill-authoring/writing-skills/anthropic-best-pra
 3. **RED — baseline before you author** (Superpowers): run or describe **pressure scenarios** (or “task without skill” observation) so you know **exact failures and rationalizations** the skill must fix. For new skills: **no final SKILL without this step.** For small edits: still ask “what broke without this change?”
 4. **GREEN — minimal skill**: address **only** what you observed; **one excellent example** where an example is needed; **name** = letters, numbers, hyphens; frontmatter **`name`** (short slug, ecosystem-typical ~64 chars) + **`description`** (≤1024 chars; triggers per CSO below).
 5. **REFACTOR**: add explicit counters for loopholes; **re-verify** with the same scenarios; tighten tokens (word-count targets and cross-refs per Superpowers).
-6. **Review with human** (Matt-style): coverage, missing edge cases, depth; skill body and in-repo prose per **`.cursor/rules/language.mdc`** (**English** in the repo; **pt-BR** only in Cursor chat unless the human asks otherwise).
+6. **Review with human** (Matt-style): coverage, missing edge cases, depth; all prose per **`.cursor/rules/language.mdc`** (**English** everywhere except `rheyder-method-v1.0-pt_BR.md`).
 
 ## Description field — merged rule (non-negotiable)
 

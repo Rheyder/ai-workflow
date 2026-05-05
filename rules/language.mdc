@@ -4,8 +4,8 @@ alwaysApply: true
 
 # Language
 
-- **Cursor chat with the user:** **Brazilian Portuguese** (pt-BR) unless they explicitly prefer another language for that conversation.
-- **Everything in this repository** (rules, skills, agents, prompts, docs, README, comments in tracked files): **English** (`en_US`).
-- **Git commit messages:** **English** (`en_US`).
+- **English** (`en_US`) for everything in this repository: rules, skills, agents, prompts, docs, README, comments in tracked files, **assistant responses in Cursor for this workspace**, and **Git commit messages**.
 
-Exceptions only when quoting original text in another language (code snippets, APIs, proper names) or when the user explicitly asks for non-English text in-repo for a specific change.
+**Exception — Brazilian Portuguese (`pt-BR`):** **`rheyder-method-v1.0-pt_BR.md`** only. Maintain that file in pt-BR; do not Anglicize its body unless the human explicitly asks.
+
+Other exceptions only when quoting original text in another language (code snippets, APIs, proper names) or when the human explicitly requests non-English text in-repo for a specific change.

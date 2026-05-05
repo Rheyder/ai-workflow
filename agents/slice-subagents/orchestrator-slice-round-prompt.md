@@ -36,7 +36,7 @@ Aggregate in one block:
 | Commands | List **and** outputs/exit codes verified this round |
 | Plan | Slice status in `plan-*` |
 
-**Portuguese (`pt-BR`)** in this chat summary; **English** for suggested commit messages and any text meant for files in the repo (per `.cursor/rules/language.mdc`).
+**English** (`en_US`) for this summary and for suggested commit messages (per `.cursor/rules/language.mdc`).
 
 ---
 
