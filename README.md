@@ -1,5 +1,9 @@
 # Cursor configuration
 
+> **Aviso de status (experimental):** este projeto **ainda está em testes** e em evolução. Não deve ser tratado como produto final nem como referência estável: comportamento do Cursor, das regras e dos agentes pode mudar, e combinações de ambiente podem surpreender. **Quem for usar deve tomar os devidos cuidados** — validar no próprio repositório, revisar sugestões da IA, manter backups, evitar confiar cegamente em fluxos críticos (produção, dados sensíveis, conformidade) sem supervisão humana.
+>
+> **Status (English):** this project is **still in testing / experimental**. It is not a finished, stable product. **Use with appropriate caution:** validate in your environment, review AI output, keep backups, and do not rely on it for critical paths without human oversight.
+
 This directory holds **persistent rules**, **skills** (reusable procedures), and **agent definitions** used with Cursor in this repository. The workflow (Normal/Complex tracks, vertical slices, delivery) aligns with the Rheyder`s method; **executable artifacts** (text, prompts, conventions) that the assistant applies day-to-day live here.
 
 **Skills** use progressive disclosure (overview, when to use / when not) and cross-links to [reference/workflow-conventions.md](reference/workflow-conventions.md), consistent with the in-repo **skill-writer** reference tree under [reference/skill-authoring/](reference/skill-authoring/).
