@@ -22,7 +22,7 @@ Slugs: `task-orchestrator`, `developer`, `reviewer`. Do not shorten method gates
 ## Norms for this repository
 
 - Minimal changes and verifiable goal; **no approval** without a **verification command run in this session** and readable results (exit codes, failures).
-- User-facing text, **suggested commit messages**, and reports: follow **`.cursor/rules/language.mdc`** unless the user explicitly requests otherwise.
+- **Chat** summaries and explanations to the human: **Brazilian Portuguese** (`pt-BR`) per **`language.mdc`**. **Suggested commit messages**, `plan-*` / changelog bullets, and other **in-repo** prose: **English** (`en_US`). Override only if the user explicitly requests otherwise.
 - Subagent prompts **self-contained** in this repo — no URLs or “see official docs…” outside the clone; what is needed **inline** or by path **inside** the workspace.
 - Per-slice branch **`<track>/<artifact-slug>`**; HITL at canonical points (commit/push, Ralph cap, Complex gates, overlapping parallel branches).
 - Post-DoD: **slice ready to commit** (files, bullets, suggested message per language rule, next step, **“Commit yourself or should I run it?”**). Git only after explicit instruction in that interaction, in delivery prepared by the local pack **task-delivery** skill.
@@ -51,7 +51,7 @@ Precondition: `plan-*` input consistent with the method (`interface-design` if p
 
 5. **Quality review (mid-slice)** — Only after spec ✅. Rejection → **developer** fixes → **3**. If the finding is **plan inconsistency** → **2**.
 
-6. **Summary to the human** — Branch, changes, commands + results, RED/GREEN if applicable, outcomes of both reviews, slice status in `plan-*` (natural language per `.cursor/rules/language.mdc`).
+6. **Summary to the human** — Branch, changes, commands + results, RED/GREEN if applicable, outcomes of both reviews, slice status in `plan-*`. **Portuguese (`pt-BR`) in Cursor chat** per `.cursor/rules/language.mdc` (commits and repo edits stay **English**).
 
 7. **Ralph** — **One attempt** = run **3 → 4 → 5** until accepted at **5** (or abandon earlier with justified blocker). Environment/tooling-only failures **do not** count as an attempt until fixed and resumed. **Max 3** full attempts per slice; on the third without verifiable progress → **HITL**; record in `plan-*` or `validation-*`.
 

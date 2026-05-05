@@ -1,8 +1,6 @@
 # Cursor configuration
 
-> **Aviso de status (experimental):** este projeto **ainda está em testes** e em evolução. Não deve ser tratado como produto final nem como referência estável: comportamento do Cursor, das regras e dos agentes pode mudar, e combinações de ambiente podem surpreender. **Quem for usar deve tomar os devidos cuidados** — validar no próprio repositório, revisar sugestões da IA, manter backups, evitar confiar cegamente em fluxos críticos (produção, dados sensíveis, conformidade) sem supervisão humana.
->
-> **Status (English):** this project is **still in testing / experimental**. It is not a finished, stable product. **Use with appropriate caution:** validate in your environment, review AI output, keep backups, and do not rely on it for critical paths without human oversight.
+> **Status:** this project is **still in testing / experimental**. It is not a finished, stable product — Cursor behavior, rules, and agents may change across versions and environments may differ. **Use with appropriate caution:** validate in your own repository, review AI suggestions, keep backups, and do not rely on this material for sensitive, compliance-heavy, or production-critical workflows without adequate human oversight.
 
 This directory holds **persistent rules**, **skills** (reusable procedures), and **agent definitions** used with Cursor in this repository. The workflow (Normal/Complex tracks, vertical slices, delivery) aligns with the Rheyder`s method; **executable artifacts** (text, prompts, conventions) that the assistant applies day-to-day live here.
 
@@ -32,7 +30,7 @@ This directory holds **persistent rules**, **skills** (reusable procedures), and
 |------|---------|
 | [karpathy-guidelines.mdc](rules/karpathy-guidelines.mdc) | Think before coding, simplicity, surgical changes, verifiable success criteria. |
 | [verification-before-completion.mdc](rules/verification-before-completion.mdc) | Do not claim completion without **fresh evidence** (command run, output read, exit code). |
-| [language.mdc](rules/language.mdc) | User-facing text in **pt-BR**; everything else in English (`en_US`) unless the user explicitly requests otherwise. |
+| [language.mdc](rules/language.mdc) | **Chat with the user** in Brazilian Portuguese (**pt-BR**); repository content and **Git commit messages** in English (`en_US`). |
 | [base-creation.mdc](rules/base-creation.mdc) | Self-contained: skills/rules/agents must work from the clone alone (no reliance on external links). |
 | [commit-push-hitl.mdc](rules/commit-push-hitl.mdc) | **Commit and push** are always **human-in-the-loop**; the assistant announces a slice ready and runs Git only if the user asks. |
 | [modo-solo.mdc](rules/modo-solo.mdc) | Solo mode: orchestrator + developer + reviewer as **roles/prompts**, not separate people; branches `<track>/<artifact-slug>`. |
