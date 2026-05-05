@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+# Language
+
+- User-facing text always in **Brazilian Portuguese** (pt-BR)
+- Everything else must always be in **English** (en_US)
+
+Exceptions only when the user explicitly requests another language, or when quoting original text in another language (code snippets, APIs, proper names).

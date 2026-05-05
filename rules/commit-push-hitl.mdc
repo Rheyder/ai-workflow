@@ -1,0 +1,38 @@
+---
+description: Commit and push are always human-in-the-loop; agent never runs git commit or git push on its own initiative. Includes mandatory post-slice announcement template.
+alwaysApply: true
+---
+
+# Commit and delivery (mandatory HITL)
+
+**Single canonical rule:** **commit and push are always done by the user.** The agent never runs `git commit` / `git push` on its own initiative — regardless of track, mode, or slice size.
+
+**Flow:**
+
+1. Slice (or final delivery) meets the corresponding **DoD** — including a green review pass and `verification-before-completion` satisfied.
+2. The agent **explicitly announces** to the user: *slice ready to commit*, listing (a) touched files, (b) summary of what changed (1–3 bullets), (c) suggested commit message, (d) next slice or status.
+3. The user decides:
+  - **(a) commits on their own** — the agent proceeds to the next slice or waits for new instructions;
+  - **(b) instructs the agent** to run (`stage + commit + push`) — only then does `task-delivery` run Git commands.
+
+**`task-delivery` in solo flow:** **prepares** the commit (selective stage, summary, suggested message, `changelog-*` update) and **announces**. It runs Git only when the user asks explicitly in that interaction. **There is no implicit commit** at the end of a slice.
+
+**Post-slice announcement — minimum format:**
+
+```markdown
+**Slice N ready to commit.**
+- Files: `<path1>`, `<path2>` ...
+- Change: <1–3 bullets>
+- Suggested message: `<type>(<scope>): <short description>`
+- Next: <slice N+1 / awaiting decision / track DoD satisfied — ready for push and PR>
+
+Commit yourself or should I run it?
+```
+
+**Variants:**
+
+- **Intermediate slice** → announcement above; no push (unless `plan-*` defines push per slice).
+- **Final delivery (track DoD satisfied)** → announcement includes materialized `validation-*`, CI/harness status, and proposal to open a PR. Push and opening the PR are also HITL.
+- **Hotfix** → same flow; announcement may be shorter, but **commit remains HITL**.
+
+**Why canonical:** avoids silent agent commits, keeps `git push` as a natural HITL point in solo mode (see core concepts / HITL), and keeps authorship/audit under user control.
