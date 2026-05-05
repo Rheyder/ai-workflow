@@ -18,7 +18,8 @@ This directory holds **persistent rules**, **skills** (reusable procedures), and
 | [skills/](skills/) | `SKILL.md` bundles plus references: invoke by **skill name** when the scenario applies. |
 | [agents/](agents/) | Method agents (orchestrator and per-slice roles) + prompts under `slice-subagents/`. |
 | [reference/](reference/) | Short canonical notes cited by skills (conventions, TDD through public surface). |
-| [rheyder-method-v1.0.md](rheyder-method-v1.0.md) | Normative **Rheyder method** baseline (tracks, conventions, appendix); authoritative human-readable companion to `.cursor/` materialization. |
+| [rheyder-method-v1.0-en_US.md](rheyder-method-v1.0-en_US.md) | Normative **Rheyder method** baseline in **English** (tracks, conventions, appendix); authoritative human-readable companion to `.cursor/` materialization. |
+| [rheyder-method-v1.0-pt_BR.md](rheyder-method-v1.0-pt_BR.md) | Same baseline in **Brazilian Portuguese** (sole pt-BR prose exception per [`language.mdc`](rules/language.mdc)). |
 
 ---
 

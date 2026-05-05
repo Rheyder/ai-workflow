@@ -4,11 +4,13 @@ Método para organizar trabalho com agentes e skills: triagem por risco → tril
 
 **Este documento** é o baseline normativo **v1.0** (trilhas, convenções estendidas, templates) **alinhado** ao `.cursor/` deste checkout (skills, agents, rules). **Última revisão:** 2026-05-04.
 
+**Outro idioma:** [inglês (en-US) — `rheyder-method-v1.0-en_US.md`](rheyder-method-v1.0-en_US.md).
+
 **Público-alvo:** desenvolvedor solo (modo default deste repo) com agentes em IDE; equipe entra apenas via revisão de PR no GitHub.
 
 **Pré-requisitos:** skills locais; `git worktree` sob demanda; harness/CI quando a trilha exigir.
 
-**Manutenção:** ao criar ou remover artefatos em `.cursor/` ou novo `.md`/`.mdc` de método, atualize **esta** página e [.cursor/README.md](../README.md).
+**Manutenção:** ao criar ou remover artefatos de workflow neste repositório (ex.: `rules/`, `skills/`, `agents/`, `reference/`) ou novo `.md`/`.mdc` de método, atualize **esta** página e [README.md](README.md).
 
 **Implementação incremental:** ao materializar nova slug, manter **autocontenção** sob `.cursor/` e o critério **skill mínima viável** em [Skills e agentes / Roadmap](#roadmap-de-materialização). **Derivar** novo conteúdo a partir das bases upstream **mattpocock/skills** e **obra/superpowers** (identificadores de repositório — URLs em [Apêndice B — Bases metodológicas](#apêndice-b--bases-metodológicas)); fundir sempre no texto publicado sob `.cursor/`. **Autoria de `SKILL.md` (writing-skills + write-a-skill):** cópia canónica em **`.cursor/reference/skill-authoring/`** e consolidação pelo agente **`skill-writer`** (ver [Catálogo](#catálogo)). Para execução pelo agente, a referência são os ficheiros em `.cursor/` (proibido usar só “ler § deste método” como passo único — ver [Autocontenção](#autocontenção-da-materialização-cursor)). **Candidatas adiadas** de rules (ex.: `interface-design-slices.mdc`) permanecem válidas até promoção — tabela em [Rules `.mdc`](#rules-mdc).
 
@@ -342,7 +344,7 @@ Commitar você ou quer que eu execute?
 
 | Momento | Escopo | Quando | Artefato |
 | ------- | ------ | ------ | -------- |
-| **Intra-slice (gate duplo)** | (1) Plano/spec/slice ↔ código — agent **`slice-spec-reviewer`** + skill **`code-review`** conforme rubrica; (2) Qualidade + evidência — **`slice-quality-reviewer`** + **`code-review`**. Ordem **obrigatória** no orquestrador: spec antes de quality. | Gate antes de encerrar a rodada/slice corrente (fluxo numerado em [.cursor/agents/task-orchestrator.md](../agents/task-orchestrator.md)) | `validation-*` típico só no **passe final**; intra-slice: registo no chat ou `plan-*` |
+| **Intra-slice (gate duplo)** | (1) Plano/spec/slice ↔ código — agent **`slice-spec-reviewer`** + skill **`code-review`** conforme rubrica; (2) Qualidade + evidência — **`slice-quality-reviewer`** + **`code-review`**. Ordem **obrigatória** no orquestrador: spec antes de quality. | Gate antes de encerrar a rodada/slice corrente (fluxo numerado em [agents/task-orchestrator.md](agents/task-orchestrator.md)) | `validation-*` típico só no **passe final**; intra-slice: registo no chat ou `plan-*` |
 | **Passe final (branch / entrega)** | Contexto geral: diff focal em Simple/Hotfix; superfície completa do branch em Normal/Complex — skill **`code-review`**, materializa **`validation-*`** | Antes de `task-delivery` | **Materializa `validation-*`** |
 
 Não são duas pessoas — são passes distintos que no IDE podem ser subagents/prompts separados ou disciplina mental no mesmo usuário.
@@ -395,7 +397,7 @@ Próximo slice só inicia quando: (a) o anterior está verde **e** o usuário de
 **Teto Ralph:**
 
 - Máximo **3 tentativas por slice** antes de HITL obrigatório.
-- **Tentativa (Ralph) = uma rodada dos passos do orquestrador até qualidade aceite (implementação `slice-developer` + `tdd-cycle` onde couber → `slice-spec-reviewer` → `slice-quality-reviewer`)**, conforme [task-orchestrator.md](../agents/task-orchestrator.md). Ciclos abortados só por tooling/ambiente **não contam** — corrigir o ambiente e seguir.
+- **Tentativa (Ralph) = uma rodada dos passos do orquestrador até qualidade aceite (implementação `slice-developer` + `tdd-cycle` onde couber → `slice-spec-reviewer` → `slice-quality-reviewer`)**, conforme [task-orchestrator.md](agents/task-orchestrator.md). Ciclos abortados só por tooling/ambiente **não contam** — corrigir o ambiente e seguir.
 - O `plan-`* pode sobrescrever o teto com justificativa explícita.
 - Ao acionar HITL, registrar em `validation-`* ou `plan-*`: tentativa atual; hipótese de bloqueio; decisão; próximo passo autorizado.
 
@@ -789,7 +791,7 @@ Skill que não cumpre (a)-(e) volta pra prompt salvo até a próxima rodada.
 | `skill-writer` | `.cursor/agents/skill-writer.md` | Autoria ou revisão de skills (disparo sob demanda) |
 | Referências | `.cursor/reference/workflow-conventions.md`, `tdd-public-api-tests.md`, **`skill-authoring/`** (writing-skills + write-a-skill) | Citadas por skills ou pelo `skill-writer` |
 
-**Referência IDE:** [.cursor/README.md](../README.md).
+**Referência IDE:** [README.md](README.md).
 
 ### Pacote workflow-pack e symlink em projetos consumidores
 
