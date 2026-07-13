@@ -1,83 +1,102 @@
 ---
 name: code-review
-description: Use when requesting review before merge or between slices; when acting as reviewer (mid-slice or final pass, or someone else's PR); when the diff is large or ambiguous vs plan or interface-design; when receiving review feedback and you must verify before changing code or replying without empty agreement.
+description: Review a diff by risk before ship. Use checklists only when relevant. Not for runtime verification — use finishing-a-development-branch.
+disable-model-invocation: true
 ---
 
-# Code review
+# Code Review
 
-## Overview
-
-Structured **diff + plan** review for the solo workflow: two gates (spec alignment, then quality/evidence), binary rubric, clear severity. Orchestration and delivery norms: [workflow-conventions.md § Cross-skill alignment](../../reference/workflow-conventions.md#cross-skill-alignment).
-
-**When acting as reviewer, announce:** `Using the code-review skill for structured review.`
-
-**Principles:** minimum context that still decides (diff + slice interface-design + plan); on feedback — **verify in repo** before implementing.
+Review a change with focus on **real risk**. Follow [CONVENTIONS.md](../CONVENTIONS.md#single-agent-session). Load **only applicable** checklists, then report via [reviewer-prompt.md](reviewer-prompt.md).
 
 ## When to use
 
-- After a meaningful slice, before merge, or when blocked and need a fresh pass.
-- **Mid-slice** and **final** passes per table below.
-- **Someone else’s PR:** treat as final pass; align with their `validation-*` / PR scope.
+- Diff is ready on a feature branch (slices passed light `slice-verification` before commit).
+- Before push/PR, after implementation.
 
 ## When not to use
 
-- **No diff or no plan/spec anchor** — gather artifacts first.
-- **Chat-only “LGTM”** without rubric — use the checklist or decline the theater.
+- Full branch AC / runtime proof — `finishing-a-development-branch` Step 1.
+- Per-slice smoke test — `slice-verification`.
+- Writing tests first — `tdd`.
 
-## Passes and scope
+## Expected input
 
-| Pass | Scope | When |
-|------|--------|------|
-| **Mid-slice** | Slice diff + that slice’s **interface-design** | Before starting the next slice |
-| **Final** | Narrow diff (Simple/Hotfix) or branch surface (Normal/Complex) | Before `task-delivery` / external handoff |
+- Fixed point for diff (branch, SHA, tag) — ask if missing.
+- Optional: spec, issue, verification notes from Verify phase.
 
-Solo mode: two **discipline moments**, not two people.
+## Process
 
-## Binary rubric (excerpt)
+### 1. Understand the change
 
-Mark each **yes / no / N/A justified** in narrative or `validation-*` (final).
+- Goal of the change (issue, PRD, conversation).
+- `git diff <fixed-point>...HEAD` and `git log <fixed-point>..HEAD --oneline`.
 
-- Matches **interface-design** from `plan-*` / slice (no surprise contracts).
-- **Vertical** slices (not layer-only drops).
-- No function/method **>20 lines** without justification in plan or code.
-- No hardcoded secrets.
-- Single responsibility inferable from names.
-- **Tests:** baseline command per track; regressions covered or justified; behavior changes have proof paths.
-- No new `TODO` without ticket.
-- No obvious stack anti-patterns (N+1, mixed layers, bad error/transaction patterns).
-- Public contracts not broken without versioning story.
+### 2. Skim repo context (light)
 
-Full track DoD may extend this — see orchestrator and `plan-*`.
+If present in the repo under review: `CONTEXT.md`, `docs/adr/`, `docs/ai-workflow/*`, `AI_WORKFLOW.md`, `STYLE.md` / `STANDARDS.md`. Do not re-litigate what CI/lint already enforces.
 
-## How to request review (developer / orchestrator)
+## Optional adapters
 
-1. Resolve base/head (or slice SHAs).
-2. Run reviewer pass with [reviewer-prompt.md](reviewer-prompt.md) — fill placeholders, attach diff or range.
-3. Triage: **Critical** now; **Important** before continue; **Minor** log or backlog; **push back** with evidence if wrong.
+If configured, use relevant adapters for:
 
-## How to receive feedback
+- repository documentation;
+- organization or language standards;
+- security policies;
+- delivery gates.
+
+See [ADAPTERS.md](../ADAPTERS.md). **Do not require adapters** to complete a review.
+
+### 3. Select review axes
+
+**Default for any code diff:** correctness-and-tests + maintainability-and-design.
+
+Add axes when the diff touches:
+
+| Axis | Load when |
+|------|-----------|
+| [security-and-configuration.md](security-and-configuration.md) | Auth, secrets, config, env, permissions, crypto |
+| [integrations-and-data.md](integrations-and-data.md) | APIs, queues, DB schema/migrations, external I/O |
+| [reliability-and-observability.md](reliability-and-observability.md) | Retries, timeouts, logging, metrics, failure modes |
+| [delivery-quality-gates.md](delivery-quality-gates.md) | CI/workflow, build scripts, lint config, release paths |
+| [spec-audition.md](spec-audition.md) | Spec, PRD, or issue AC in scope |
+
+Skip an axis when nothing in the diff applies — do not load the file.
+
+### 4. Apply selected checklists
+
+For each loaded file, apply checklist items to the diff only. Classify: **Critical** (merge blocker) | **Important** | **Minor** | **Nit**. Blockers before cosmetics.
+
+### 5. Report
+
+Use [reviewer-prompt.md](reviewer-prompt.md). Put **Blockers** first in the consolidated section.
+
+### 6. Next step (one at a time)
 
 ```
-READ → UNDERSTAND (rephrase or ask) → VERIFY in code → ASSESS for THIS repo → REPLY or IMPLEMENT (one item at a time, each verified)
+Review complete
+├─ Readability / duplication → offer code-simplification (user confirms)
+├─ Structure / seams → offer improve-codebase-architecture (user confirms)
+├─ Critical / Important on diff → fix via tdd; re-run code-review
+├─ Spec gap in code → tdd or update spec/issue
+└─ No blockers → finishing-a-development-branch (branch verify + ship menu)
 ```
 
-**Avoid:** performative agreement, implementing before disambiguation, empty thanks — replace with technical summary and code.
+Do not run `code-simplification` or `improve-codebase-architecture` without explicit user approval.
 
-**External / PR feedback:** suggestion until verified (`grep` usage before “proper” refactors on dead paths). Conflict with product owner → stop and align.
+## Expected output
 
-**GitHub:** reply in-thread where applicable.
+Report per reviewer-prompt: Summary, Blockers, Important findings, Recommended improvements, Evidence reviewed, Next step; plus detail sections **only for axes loaded**.
 
-Fix order: blockers → simple → complex; verify each fix.
+## Minimal checklist
 
-## Common mistakes
+- [ ] Fixed point pinned
+- [ ] Applicable axes selected (not all by default)
+- [ ] Findings cite `path:line` or diff hunk
+- [ ] Blockers stated before nits
+- [ ] Next step offered
 
-| Mistake | Fix |
-|---------|-----|
-| Review without plan/interface-design | Attach slice contract |
-| Skip mid-slice | Review slice diff before next slice |
-| Blind implementation | Verify each finding |
-| Nits as Critical | Honest severity |
+## Boundaries
 
-## Further reading
-
-- [reviewer-prompt.md](reviewer-prompt.md)
+- **correctness-and-tests** — adequacy of tests in the diff; does not replace running the suite (`slice-verification` / `finishing`).
+- **delivery-quality-gates** — PR readiness signals; does not replace `finishing` Step 1.
+- **Runtime verification** — `finishing-a-development-branch` Step 1 only.

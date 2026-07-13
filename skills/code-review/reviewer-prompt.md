@@ -1,101 +1,85 @@
-# Reviewer prompt (sub-agent or second pass)
+# Review output template
 
-Replace placeholders before sending:
+One session per [CONVENTIONS.md](../CONVENTIONS.md#single-agent-session). Report only axes you loaded in `code-review` Step 3.
 
-| Placeholder | Content |
-|-------------|---------|
-| `{WHAT_WAS_IMPLEMENTED}` | What was built in this range |
-| `{PLAN_OR_REQUIREMENTS}` | Plan, slice, interface-design, or reference requirements |
-| `{BASE_SHA}` | Base commit of range |
-| `{HEAD_SHA}` | Head commit of range |
-| `{DESCRIPTION}` | Short diff summary |
+## Rules
+
+- Cite `path:line` or a specific diff hunk for each finding
+- Severity: **Critical** (merge blocker) | **Important** | **Minor** | **Nit**
+- Prefer evidence in the diff; skip generic advice
+- Omit dimension sections you did not load
+- Cap ~400 words per loaded dimension on large diffs; prioritize Critical and Important
+
+## Template
+
+```markdown
+## Summary
+
+<one line: counts by severity + worst issue, if any>
+
+## Blockers
+
+- [Critical] path:line — finding
+(or: None)
+
+## Important findings
+
+- [Important] path:line — finding
+(or: None)
+
+## Recommended improvements
+
+- [Minor/Nit] path:line — finding
+(or: None)
+
+## Evidence reviewed
+
+- Diff: `<fixed-point>...HEAD`
+- Axes loaded: <list>
+- Optional: slice verification notes, spec/issue refs
+
+## Next step
+
+<single recommended action>
 
 ---
 
-Act as production-readiness code reviewer.
+<!-- Include ONLY sections below for axes you loaded. -->
 
-**Task:**
+## Correctness & Tests
 
-1. Review `{WHAT_WAS_IMPLEMENTED}`.
-2. Compare with `{PLAN_OR_REQUIREMENTS}` and slice interface-design when present.
-3. Assess quality, architecture, and tests.
-4. Classify findings by severity.
-5. Binary verdict aligned with rubric in `SKILL.md` (Rubric section).
+- [Severity] path:line — finding
 
-## What was implemented
+## Security & Configuration
 
-{DESCRIPTION}
+- [Severity] path:line — finding
 
-## Requirements / plan
+## Integrations & Data
 
-{PLAN_OR_REQUIREMENTS}
+- [Severity] path:line — finding
 
-## Git range
+## Reliability & Observability
 
-**Base:** `{BASE_SHA}`  
-**Head:** `{HEAD_SHA}`
+- [Severity] path:line — finding
 
-```bash
-git diff --stat {BASE_SHA}..{HEAD_SHA}
-git diff {BASE_SHA}..{HEAD_SHA}
+## Maintainability & Design
+
+- [Severity] path:line — finding
+
+## Delivery & Quality Gates
+
+- [Severity] path:line — finding
+
+## Spec Audition
+
+### Missing / Partial
+- [Severity] — finding (quote spec/issue)
+
+### Scope creep
+- [Severity] — finding
+
+### Likely wrong implementation
+- [Severity] — finding
 ```
 
-## Supporting checklist (beyond core rubric)
-
-**Quality**
-
-- Separation of concerns?
-- Errors/failures handled consistently with project norms?
-- Types/contracts coherent?
-- Reasonable DRY?
-- Edge cases on changed paths?
-
-**Architecture**
-
-- Defensible decisions?
-- Performance/security implications where touched?
-
-**Tests**
-
-- Tests exercise real behavior (not mocks only)?
-- Critical paths covered or justified?
-
-**Requirements**
-
-- Plan scope respected (no surprise public contracts)?
-
-## Output format
-
-### Strengths
-
-[Be specific.]
-
-### Issues
-
-#### Critical (blocking)
-
-[Bugs, security, data loss, broken functionality]
-
-#### Important (fix before continuing)
-
-[Fragile design, meaningful test gaps, poor error handling]
-
-#### Minor (optional)
-
-[Style, micro-optimizations, docs]
-
-Per item: file:line when applicable, what is wrong, why it matters, how to fix if non-obvious.
-
-### Recommendations
-
-[Process or structure improvements]
-
-### Assessment
-
-**Ready for merge / next step?** Yes / No / After fixes — one technical sentence of rationale.
-
-## Reviewer rules
-
-**Do:** realistic severity; specificity; explain why; acknowledge quality; clear verdict.
-
-**Avoid:** "looks ok" without inspection; nitpick as critical; feedback outside range; vagueness.
+**Ordering:** Consolidated sections (Summary through Next step) first; detail sections follow for traceability. Duplicate Critical items may appear in both Blockers and the dimension section.
