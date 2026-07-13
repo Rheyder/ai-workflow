@@ -2,6 +2,8 @@
 
 Workflow agnóstico de ferramenta para conduzir mudanças de software com clareza, qualidade e baixo consumo de contexto.
 
+As skills são baseadas principalmente em [mattpocock/skills](https://github.com/mattpocock/skills), com influência adicional de [obra/superpowers](https://github.com/obra/superpowers).
+
 > **Idioma das skills:** o conteúdo operacional (`SKILL.md`, checklists, templates) permanece em **inglês**. Este arquivo é apenas o guia em português.
 
 Regras transversais: [CONVENTIONS.md](CONVENTIONS.md).

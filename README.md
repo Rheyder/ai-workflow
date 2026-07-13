@@ -2,6 +2,8 @@
 
 Tool-independent workflow for software changes with clarity, quality, and low context use.
 
+Skills are based primarily on [mattpocock/skills](https://github.com/mattpocock/skills), with additional influence from [obra/superpowers](https://github.com/obra/superpowers).
+
 Transversal rules: [CONVENTIONS.md](CONVENTIONS.md). Portuguese overview: [README-pt_br.md](README-pt_br.md).
 
 ## Core Workflow
