@@ -28,7 +28,7 @@ Use the project's configured frontend, browser, or end-to-end testing approach.
    - console errors;
    - network failures;
    - accessibility findings.
-5. **Hand back** — Return to the calling skill to complete the verification report. State pass/fail with command output ([CONVENTIONS.md](../CONVENTIONS.md#evidence-before-claims)).
+5. **Hand back** — Return to the calling skill to complete the verification report. State pass/fail with command output ([CONVENTIONS.md](../../CONVENTIONS.md#evidence-before-claims)).
 
 ## Boundaries
 

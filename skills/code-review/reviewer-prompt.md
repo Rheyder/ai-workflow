@@ -1,6 +1,6 @@
 # Review output template
 
-One session per [CONVENTIONS.md](../CONVENTIONS.md#single-agent-session). Report only axes you loaded in `code-review` Step 3.
+One session per [CONVENTIONS.md](../../CONVENTIONS.md#single-agent-session). Report only axes you loaded in `code-review` Step 3.
 
 ## Rules
 

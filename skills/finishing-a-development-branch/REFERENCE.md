@@ -1,6 +1,6 @@
 # Finishing a branch — git integration reference
 
-Used by [SKILL.md](SKILL.md) Steps 5–6. Branch verification: [verification-report.md](verification-report.md). Evidence: [CONVENTIONS.md](../CONVENTIONS.md#evidence-before-claims).
+Used by [SKILL.md](SKILL.md) Steps 5–6. Branch verification: [verification-report.md](verification-report.md). Evidence: [CONVENTIONS.md](../../CONVENTIONS.md#evidence-before-claims).
 
 ## Step 5: Execute choice
 

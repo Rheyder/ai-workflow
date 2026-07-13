@@ -1,6 +1,6 @@
 # Pipeline reference
 
-Detailed skill order, boundaries, HITL, and target-repo artifacts. Core phases: [WORKFLOW.md](../WORKFLOW.md). Contracts: [contracts.md](contracts.md).
+Detailed skill order, boundaries, HITL, and target-repo artifacts. Core phases: [WORKFLOW.md](../../WORKFLOW.md). Contracts: [contracts.md](contracts.md).
 
 **Optional bootstrap:** `setup-workflow` may seed `docs/ai-workflow/` — not required before Spec/Plan/Build.
 
@@ -85,7 +85,7 @@ The agent prepares; the user decides when git history or remotes change.
 
 ## Evidence
 
-Transversal rules: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal rules: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 | Scope | Skill | Report template |
 |-------|-------|-----------------|

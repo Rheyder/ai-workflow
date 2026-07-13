@@ -5,7 +5,7 @@ description: Hard bugs and regressions — reproduce, hypothesize, instrument, f
 
 # Diagnose
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

@@ -7,7 +7,7 @@ description: Create feature branches and announce slice-ready commits (HITL). Us
 
 **Branching phase** — Gitflow, one commit per slice, HITL for commit/push.
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

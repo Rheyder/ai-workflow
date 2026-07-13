@@ -48,8 +48,8 @@ Por slice: Branching → Build → Verify → (commit HITL) → repetir. Depois 
 | Arquivo | Papel |
 |---------|-------|
 | [WORKFLOW.md](WORKFLOW.md) | Oito fases, regras |
-| [workflow/contracts.md](workflow/contracts.md) | Entrada / ação / saída por fase |
-| [workflow/pipeline-reference.md](workflow/pipeline-reference.md) | HITL, tabelas, layout no repo alvo |
+| [workflow/contracts.md](skills/workflow/contracts.md) | Entrada / ação / saída por fase |
+| [workflow/pipeline-reference.md](skills/workflow/pipeline-reference.md) | HITL, tabelas, layout no repo alvo |
 | [DEFINITION_OF_DONE.md](DEFINITION_OF_DONE.md) | Checklist de pronto para entrega |
 | [CONTEXT_POLICY.md](CONTEXT_POLICY.md) | Contexto mínimo entre fases |
 | [CONVENTIONS.md](CONVENTIONS.md) | Evidência, sessão, comunicação concisa |
@@ -59,13 +59,13 @@ Por slice: Branching → Build → Verify → (commit HITL) → repetir. Depois 
 
 Carregadas **sob demanda** por `code-review` — não fazem parte do caminho padrão:
 
-- [correctness-and-tests.md](code-review/correctness-and-tests.md)
-- [maintainability-and-design.md](code-review/maintainability-and-design.md)
-- [security-and-configuration.md](code-review/security-and-configuration.md)
-- [reliability-and-observability.md](code-review/reliability-and-observability.md)
-- [integrations-and-data.md](code-review/integrations-and-data.md)
-- [delivery-quality-gates.md](code-review/delivery-quality-gates.md)
-- [spec-audition.md](code-review/spec-audition.md)
+- [correctness-and-tests.md](skills/code-review/correctness-and-tests.md)
+- [maintainability-and-design.md](skills/code-review/maintainability-and-design.md)
+- [security-and-configuration.md](skills/code-review/security-and-configuration.md)
+- [reliability-and-observability.md](skills/code-review/reliability-and-observability.md)
+- [integrations-and-data.md](skills/code-review/integrations-and-data.md)
+- [delivery-quality-gates.md](skills/code-review/delivery-quality-gates.md)
+- [spec-audition.md](skills/code-review/spec-audition.md)
 
 ## Toolbox
 
@@ -103,7 +103,7 @@ Feature *exportar relatório como CSV* (planejamento em `.scratch/export-csv/`):
 | Review | `code-review` | Relatório do diff |
 | Ship | `finishing-a-development-branch` | Verificação da branch; resumo de entrega |
 
-Detalhes: [workflow/pipeline-reference.md](workflow/pipeline-reference.md).
+Detalhes: [workflow/pipeline-reference.md](skills/workflow/pipeline-reference.md).
 
 ## Filosofia
 
@@ -114,7 +114,7 @@ Detalhes: [workflow/pipeline-reference.md](workflow/pipeline-reference.md).
 
 ## Estender
 
-[write-a-skill/SKILL.md](write-a-skill/SKILL.md). Opcionalmente, rode `setup-workflow` de novo para atualizar `docs/ai-workflow/` após mudanças no pacote.
+[write-a-skill/SKILL.md](skills/write-a-skill/SKILL.md). Opcionalmente, rode `setup-workflow` de novo para atualizar `docs/ai-workflow/` após mudanças no pacote.
 
 ## Versão em inglês
 

@@ -56,8 +56,8 @@ For **small, safe, localized** changes:
 
 | Document | Purpose |
 |----------|---------|
-| [workflow/contracts.md](workflow/contracts.md) | Input / action / output per phase |
-| [workflow/pipeline-reference.md](workflow/pipeline-reference.md) | HITL, tables, target-repo layout |
+| [workflow/contracts.md](skills/workflow/contracts.md) | Input / action / output per phase |
+| [workflow/pipeline-reference.md](skills/workflow/pipeline-reference.md) | HITL, tables, target-repo layout |
 | [DEFINITION_OF_DONE.md](DEFINITION_OF_DONE.md) | When a change is ready |
 | [CONTEXT_POLICY.md](CONTEXT_POLICY.md) | Minimal context between phases |
 | [README.md](README.md) | Core vs Toolbox vs checklists vs adapters |

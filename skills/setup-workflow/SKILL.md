@@ -39,7 +39,7 @@ Read whatever exists; do not assume:
 
 - `AI_WORKFLOW.md` — existing workflow index block?
 - `docs/ai-workflow/` — prior bootstrap output
-- Optional host adapters: `AGENTS.md`, `CLAUDE.md` (see [ADAPTERS.md](../ADAPTERS.md)) — do not require them
+- Optional host adapters: `AGENTS.md`, `CLAUDE.md` (see [ADAPTERS.md](../../ADAPTERS.md)) — do not require them
 - `CONTEXT.md`, `CONTEXT-MAP.md`, `docs/adr/`
 - `.scratch/` — existing feature folders
 
@@ -76,7 +76,7 @@ Defaults: [triage-labels.md](./triage-labels.md).
 
 **Section D — Workflow docs**
 
-Present [WORKFLOW.md](../WORKFLOW.md) and [workflow/pipeline-reference.md](../workflow/pipeline-reference.md). Confirm Toolbox skills for this repo.
+Present [WORKFLOW.md](../../WORKFLOW.md) and [workflow/pipeline-reference.md](../workflow/pipeline-reference.md). Confirm Toolbox skills for this repo.
 
 ### 3. Confirm and edit
 
@@ -140,12 +140,12 @@ Local markdown under `.scratch/` unless configured otherwise. See `docs/ai-workf
 - [issue-tracker.md](./issue-tracker.md) → `docs/ai-workflow/issue-tracker.md`
 - [triage-labels.md](./triage-labels.md) → `docs/ai-workflow/triage-labels.md`
 - [domain.md](./domain.md) → `docs/ai-workflow/domain.md`
-- [../WORKFLOW.md](../WORKFLOW.md) → `docs/ai-workflow/workflow.md`
+- [../../WORKFLOW.md](../../WORKFLOW.md) → `docs/ai-workflow/workflow.md`
 - [../workflow/contracts.md](../workflow/contracts.md) → `docs/ai-workflow/contracts.md`
 - [../workflow/pipeline-reference.md](../workflow/pipeline-reference.md) → `docs/ai-workflow/pipeline-reference.md`
-- [../DEFINITION_OF_DONE.md](../DEFINITION_OF_DONE.md) → `docs/ai-workflow/definition-of-done.md`
-- [../CONTEXT_POLICY.md](../CONTEXT_POLICY.md) → `docs/ai-workflow/context-policy.md`
-- [../CONVENTIONS.md](../CONVENTIONS.md) → `docs/ai-workflow/conventions.md`
+- [../../DEFINITION_OF_DONE.md](../../DEFINITION_OF_DONE.md) → `docs/ai-workflow/definition-of-done.md`
+- [../../CONTEXT_POLICY.md](../../CONTEXT_POLICY.md) → `docs/ai-workflow/context-policy.md`
+- [../../CONVENTIONS.md](../../CONVENTIONS.md) → `docs/ai-workflow/conventions.md`
 
 ### 5. Done
 

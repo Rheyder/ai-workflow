@@ -11,7 +11,7 @@ description: Verify whole branch then offer merge/PR menu (HITL). Use when ready
 - Diff review → `code-review`
 - PR readiness checklist only → `delivery-quality-gates.md` in review
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md). Done criteria: [DEFINITION_OF_DONE.md](../DEFINITION_OF_DONE.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md). Done criteria: [DEFINITION_OF_DONE.md](../../DEFINITION_OF_DONE.md).
 
 ## Overview
 

@@ -5,7 +5,7 @@ description: Turn a request into a short spec with scope, acceptance criteria, r
 
 # To Spec
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

@@ -21,8 +21,8 @@ Delivery may be merge, publication, handoff, patch, or human review — no speci
 | Plan | Slices/tasks + order + how each slice will be verified |
 | Branching | Clean baseline + working branch recorded |
 | Build | Code + tests for new/changed behavior |
-| Verify (slice) | [slice-verification](slice-verification/verification-report.md) report with evidence |
-| Verify (branch) | [finishing Step 1](finishing-a-development-branch/verification-report.md) before integration |
+| Verify (slice) | [slice-verification](skills/slice-verification/verification-report.md) report with evidence |
+| Verify (branch) | [finishing Step 1](skills/finishing-a-development-branch/verification-report.md) before integration |
 | Review | Findings by severity; blockers resolved or accepted |
 | Simplify | Tests still pass; behavior unchanged |
 | Ship | Integration path chosen; user HITL on remotes when applicable |

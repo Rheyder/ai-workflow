@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Code Review
 
-Review a change with focus on **real risk**. Follow [CONVENTIONS.md](../CONVENTIONS.md#single-agent-session). Load **only applicable** checklists, then report via [reviewer-prompt.md](reviewer-prompt.md).
+Review a change with focus on **real risk**. Follow [CONVENTIONS.md](../../CONVENTIONS.md#single-agent-session). Load **only applicable** checklists, then report via [reviewer-prompt.md](reviewer-prompt.md).
 
 ## When to use
 
@@ -44,7 +44,7 @@ If configured, use relevant adapters for:
 - security policies;
 - delivery gates.
 
-See [ADAPTERS.md](../ADAPTERS.md). **Do not require adapters** to complete a review.
+See [ADAPTERS.md](../../ADAPTERS.md). **Do not require adapters** to complete a review.
 
 ### 3. Select review axes
 

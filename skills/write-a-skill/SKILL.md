@@ -27,7 +27,7 @@ description: Create new agent skills with proper structure, progressive disclosu
 
 ```
 skill-name/
-├── SKILL.md           # Main instructions (required); link ../CONVENTIONS.md for transversal rules
+├── SKILL.md           # Main instructions (required); link ../../CONVENTIONS.md for transversal rules
 ├── REFERENCE.md       # Detailed docs (if needed)
 ├── EXAMPLES.md        # Usage examples (if needed)
 └── scripts/           # Utility scripts (if needed)
@@ -36,7 +36,7 @@ skill-name/
 
 ## SKILL.md Template
 
-Align with [CONVENTIONS.md § Skill file shape](../CONVENTIONS.md#skill-file-shape):
+Align with [CONVENTIONS.md § Skill file shape](../../CONVENTIONS.md#skill-file-shape):
 
 ```md
 ---
@@ -46,7 +46,7 @@ description: [One line: what it does]. Use when [trigger]. Not for [anti-trigger
 
 # Skill Name
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md) — link only sections you need.
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md) — link only sections you need.
 
 ## When to use
 
@@ -115,7 +115,7 @@ Split into separate files when:
 
 After drafting, verify:
 
-- [ ] Links [CONVENTIONS.md](../CONVENTIONS.md) for transversal rules instead of duplicating them
+- [ ] Links [CONVENTIONS.md](../../CONVENTIONS.md) for transversal rules instead of duplicating them
 - [ ] Description includes triggers ("Use when...")
 - [ ] SKILL.md under 100 lines
 - [ ] No time-sensitive info

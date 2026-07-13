@@ -18,6 +18,6 @@ Focus: readability, structure, duplication, scope, and fit with the codebase. **
 - [ ] Module boundaries respected; dependencies flow in the expected direction
 - [ ] No dead code, commented-out blocks, or unused imports introduced
 - [ ] File size growth reasonable for this change (flag only what this diff added)
-- [ ] Documented repo standards respected where applicable — [CONVENTIONS.md](../CONVENTIONS.md#repo-standards-discovery)
+- [ ] Documented repo standards respected where applicable — [CONVENTIONS.md](../../CONVENTIONS.md#repo-standards-discovery)
 
 If nothing in the diff touches this dimension: report `N/A — no applicable changes`.

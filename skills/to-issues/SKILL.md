@@ -5,7 +5,7 @@ description: Split a spec into small executable tasks with acceptance criteria a
 
 # To Issues
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

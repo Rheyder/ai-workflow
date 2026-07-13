@@ -2,7 +2,7 @@
 
 Copied to `docs/ai-workflow/issue-tracker.md` at optional bootstrap.
 
-**Default for this package:** specs and tasks as markdown under `.scratch/`. External issue trackers are optional adapters — see [ADAPTERS.md](../ADAPTERS.md).
+**Default for this package:** specs and tasks as markdown under `.scratch/`. External issue trackers are optional adapters — see [ADAPTERS.md](../../ADAPTERS.md).
 
 ## Conventions
 

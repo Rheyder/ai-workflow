@@ -58,7 +58,7 @@ No “verified”, “passing”, push/PR, or merge claims without **fresh comma
 | Current slice | `slice-verification` |
 | Whole branch (before push/PR) | `finishing-a-development-branch` Step 1 |
 
-Branch procedure and report template: [finishing-a-development-branch/verification-report.md](finishing-a-development-branch/verification-report.md). Slice report: [slice-verification/verification-report.md](slice-verification/verification-report.md).
+Branch procedure and report template: [finishing-a-development-branch/verification-report.md](skills/finishing-a-development-branch/verification-report.md). Slice report: [slice-verification/verification-report.md](skills/slice-verification/verification-report.md).
 
 ## Implementation discipline
 

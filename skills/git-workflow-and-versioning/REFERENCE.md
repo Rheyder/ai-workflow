@@ -1,6 +1,6 @@
 # Git workflow — reference
 
-Used by [SKILL.md](SKILL.md). Transversal rules: [CONVENTIONS.md](../CONVENTIONS.md).
+Used by [SKILL.md](SKILL.md). Transversal rules: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## Commit messages
 

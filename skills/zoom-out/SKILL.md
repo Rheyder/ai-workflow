@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Zoom Out
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

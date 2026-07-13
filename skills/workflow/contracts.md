@@ -1,6 +1,6 @@
 # Workflow Contracts
 
-Input, action, and output per phase. Canonical overview: [WORKFLOW.md](../WORKFLOW.md).
+Input, action, and output per phase. Canonical overview: [WORKFLOW.md](../../WORKFLOW.md).
 
 ## 1. Spec
 
@@ -147,7 +147,7 @@ Input, action, and output per phase. Canonical overview: [WORKFLOW.md](../WORKFL
 **Action:**
 
 - Prepare delivery.
-- Run final checklist ([DEFINITION_OF_DONE.md](../DEFINITION_OF_DONE.md)).
+- Run final checklist ([DEFINITION_OF_DONE.md](../../DEFINITION_OF_DONE.md)).
 - Summarize change, risk, and evidence.
 
 **Output:**

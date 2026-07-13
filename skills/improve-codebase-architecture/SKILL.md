@@ -36,7 +36,7 @@ This skill is _informed_ by the project's domain model. The domain language give
 | User / post-review | User confirms → run this skill on cited scope |
 | `diagnose` post-mortem | Hand off when no good test seam — after fix is in |
 
-Follow [CONVENTIONS.md](../CONVENTIONS.md#single-agent-session) for explore, HTML report, grilling loop, and [INTERFACE-DESIGN.md](INTERFACE-DESIGN.md).
+Follow [CONVENTIONS.md](../../CONVENTIONS.md#single-agent-session) for explore, HTML report, grilling loop, and [INTERFACE-DESIGN.md](INTERFACE-DESIGN.md).
 
 **Do not** auto-run after each TDD slice.
 

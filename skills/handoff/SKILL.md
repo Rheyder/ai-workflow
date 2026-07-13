@@ -6,7 +6,7 @@ argument-hint: "What will the next session be used for?"
 
 # Handoff
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

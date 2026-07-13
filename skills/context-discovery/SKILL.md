@@ -5,7 +5,7 @@ description: Stress-test a plan against CONTEXT.md and ADRs before Spec. Toolbox
 
 # Context Discovery
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

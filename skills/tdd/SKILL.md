@@ -11,7 +11,7 @@ description: Build or fix behavior test-first (RED-GREEN-refactor, vertical slic
 - Reviewing test adequacy in a diff → `code-review` / `correctness-and-tests.md`
 - Full branch AC before ship → `finishing-a-development-branch` Step 1
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md).
 
 ## When to use
 

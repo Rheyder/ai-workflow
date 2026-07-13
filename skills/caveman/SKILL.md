@@ -5,7 +5,7 @@ description: Ultra-short replies when user requests caveman mode or fewer tokens
 
 # Caveman
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md). Does not waive [evidence before claims](../CONVENTIONS.md#evidence-before-claims) or required report templates.
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md). Does not waive [evidence before claims](../../CONVENTIONS.md#evidence-before-claims) or required report templates.
 
 ## When to use
 
@@ -13,7 +13,7 @@ Transversal: [CONVENTIONS.md](../CONVENTIONS.md). Does not waive [evidence befor
 
 ## When not to use
 
-- Default communication — [CONVENTIONS.md § Concise communication](../CONVENTIONS.md#concise-communication) is enough.
+- Default communication — [CONVENTIONS.md § Concise communication](../../CONVENTIONS.md#concise-communication) is enough.
 
 Respond terse like smart caveman. All technical substance stay. Only fluff die.
 

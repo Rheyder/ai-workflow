@@ -15,7 +15,7 @@ description: Verify the current slice with evidence after TDD GREEN. Use before 
 
 Confirm **this slice** works in practice — not the whole feature branch. Run focused checks, capture evidence, then report.
 
-**Evidence:** Follow [CONVENTIONS.md](../CONVENTIONS.md#evidence-before-claims) (slice scope). Report per [verification-report.md](verification-report.md).
+**Evidence:** Follow [CONVENTIONS.md](../../CONVENTIONS.md#evidence-before-claims) (slice scope). Report per [verification-report.md](verification-report.md).
 
 ## When to use
 
@@ -114,7 +114,7 @@ Slice validation failed
 
 ## Red flags
 
-- False "verified" claims — [CONVENTIONS.md](../CONVENTIONS.md#evidence-before-claims)
+- False "verified" claims — [CONVENTIONS.md](../../CONVENTIONS.md#evidence-before-claims)
 - Running full AC / whole-branch suite here (belongs in `finishing`)
 - Using `code-review` as substitute for slice behavior checks
 - Skipping report before commit announcement

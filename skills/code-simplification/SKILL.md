@@ -7,7 +7,7 @@ description: Simplify code in scope without behavior change. Use after tests pas
 
 **Simplify phase** — clarity only; behavior unchanged.
 
-Transversal: [CONVENTIONS.md](../CONVENTIONS.md). Patterns: [patterns.md](patterns.md#eligibility).
+Transversal: [CONVENTIONS.md](../../CONVENTIONS.md). Patterns: [patterns.md](patterns.md#eligibility).
 
 ## When to use
 
@@ -38,7 +38,7 @@ Capture once: explicit paths only; or `git diff <fixed-point>...HEAD`; or last c
 
 ### 2. Load conventions
 
-Skim repo standards per [CONVENTIONS.md](../CONVENTIONS.md#repo-standards-discovery).
+Skim repo standards per [CONVENTIONS.md](../../CONVENTIONS.md#repo-standards-discovery).
 
 ### 3. Understand before editing
 

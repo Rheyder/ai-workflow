@@ -1,6 +1,6 @@
 # Branch verification (Step 1)
 
-Procedure and report template for `finishing-a-development-branch`. Follow [CONVENTIONS.md](../CONVENTIONS.md#evidence-before-claims) (branch scope) before offering push/PR/merge.
+Procedure and report template for `finishing-a-development-branch`. Follow [CONVENTIONS.md](../../CONVENTIONS.md#evidence-before-claims) (branch scope) before offering push/PR/merge.
 
 ## Iron law
 
@@ -97,7 +97,7 @@ One agent produces the full report after running checks.
 - State explicitly what was **not** verified and why
 - Cap narrative; evidence over assumptions
 - Confidence must match evidence (do not mark `high` with large gaps)
-- No "ready for push/PR" without evidence per [CONVENTIONS.md](../CONVENTIONS.md#evidence-before-claims)
+- No "ready for push/PR" without evidence per [CONVENTIONS.md](../../CONVENTIONS.md#evidence-before-claims)
 
 ### Template
 
